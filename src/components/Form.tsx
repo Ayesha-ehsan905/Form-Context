@@ -10,6 +10,7 @@ const Form = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     const data = {
+      id: Math.floor(Math.random() * 100000),
       name,
       grade,
     };

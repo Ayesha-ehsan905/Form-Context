@@ -8,7 +8,7 @@ function App() {
     <Provider>
       <div className="App">
         <Form />
-        {/* <FormList /> */}
+        <FormList />
       </div>
     </Provider>
   );

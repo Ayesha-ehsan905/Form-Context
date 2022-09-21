@@ -1,6 +1,7 @@
 export interface IForm {
   name: string;
   grade: string;
+  id: number;
   //   image: string;
 }
 

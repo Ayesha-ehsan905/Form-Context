@@ -4,11 +4,11 @@ import { IForm, IFormContext } from "../components/IForm";
 
 const initialStates: IFormContext = {
   addDetail(form) {},
-  forms: [],
+  forms: [{ name: "Ayesha", grade: "B+", id: 1 }],
 };
 
 const reduceIntialState = {
-  forms: [],
+  forms: [{ name: "Ayesha", grade: "B+", id: 1 }],
 };
 const FormContext = createContext<IFormContext>(initialStates);
 
@@ -24,7 +24,7 @@ const Provider = (props) => {
   return (
     <FormContext.Provider
       value={{
-        forms: state.form,
+        forms: state.forms,
         addDetail,
       }}
     >

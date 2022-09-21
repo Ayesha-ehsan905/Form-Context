@@ -1,13 +1,19 @@
 import React, { useContext } from "react";
+import { FormContext } from "../context/FormContext";
 const Test = (props) => {
   let { form } = props;
-
+  let { deletedetails } = useContext(FormContext);
   return (
-    <div>
-      First Form
-      <h1>{form.name}</h1>
-      <h1>{form.grade}</h1>
-    </div>
+    <>
+      <span className="content">{form.id}</span>
+      <span className="content">{form.name}</span>
+      <span className="content">{form.grade}</span>
+      <span className="content">
+        <button className="Buttons" onClick={() => deletedetails(form.id)}>
+          Delete
+        </button>
+      </span>
+    </>
   );
 };
 

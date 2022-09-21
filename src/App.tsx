@@ -8,7 +8,6 @@ function App() {
     <Provider>
       <div className="App">
         <Form />
-        <FormList />
       </div>
     </Provider>
   );

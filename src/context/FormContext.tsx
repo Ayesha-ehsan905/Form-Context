@@ -4,6 +4,7 @@ import { IForm, IFormContext } from "../components/IForm";
 
 const initialStates: IFormContext = {
   addDetail(form) {},
+  deletedetails(id) {},
   forms: [{ name: "Ayesha", grade: "B+", id: 1 }],
 };
 
@@ -15,6 +16,12 @@ const FormContext = createContext<IFormContext>(initialStates);
 const Provider = (props) => {
   const [state, dispatch] = useReducer(Reducer, reduceIntialState);
 
+  const deletedetails = (id) => {
+    dispatch({
+      type: "REMOVE",
+      payload: id,
+    });
+  };
   const addDetail = (form) => {
     dispatch({
       type: "ADD",
@@ -26,6 +33,7 @@ const Provider = (props) => {
       value={{
         forms: state.forms,
         addDetail,
+        deletedetails,
       }}
     >
       {props.children}

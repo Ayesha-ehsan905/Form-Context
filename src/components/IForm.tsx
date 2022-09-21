@@ -8,4 +8,5 @@ export interface IForm {
 export interface IFormContext {
   forms: IForm[];
   addDetail: (form: IForm) => void;
+  deletedetails: (id: number) => void;
 }

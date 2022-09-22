@@ -20,7 +20,7 @@ const Form = () => {
     addDetail(data);
     setName("");
     setGrade("");
-    // setselectedFile();
+    // setselectedFile(null);
   };
   const fileHandler = (e) => {
     setselectedFile(e.target.files[0]);
@@ -44,6 +44,7 @@ const Form = () => {
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              maxLength={20}
               required
             />
             <label>Name</label>
@@ -53,6 +54,7 @@ const Form = () => {
               type="text"
               value={grade}
               onChange={(e) => setGrade(e.target.value)}
+              maxLength={1}
               required
             />
             <label>Grade</label>

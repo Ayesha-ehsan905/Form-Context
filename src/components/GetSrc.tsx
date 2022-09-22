@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const SRC = (props) => {
-  console.log("Fromsrc", props.Image);
+  //   console.log("Fromsrc", props.Image);
   const [preview, setPreview] = useState();
   const reader = new FileReader();
   reader.onloadend = () => {

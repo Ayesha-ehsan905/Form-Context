@@ -11,11 +11,13 @@ const Form = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     const data = {
-      id: Math.floor(Math.random() * 100000),
+      id: Math.floor(Math.random() * 55),
       name,
       grade,
     };
     addDetail(data);
+    setName("");
+    setGrade("");
   };
 
   return (
@@ -55,13 +57,8 @@ const Form = () => {
           List Entries
         </div>
 
-        {/* <div>
-          <input
-            className="input-grey-rounded"
-            type="text"
-            placeholder="Search"
-          />
-        </div> */}
+        {/* <Search /> */}
+
         <FormList />
       </div>
     </div>

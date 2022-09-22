@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { FormContext } from "../context/FormContext";
-const Test = (props) => {
+const SingleDetail = (props) => {
   let { form } = props;
   let { deletedetails } = useContext(FormContext);
   return (
@@ -19,4 +19,4 @@ const Test = (props) => {
   );
 };
 
-export default Test;
+export default SingleDetail;

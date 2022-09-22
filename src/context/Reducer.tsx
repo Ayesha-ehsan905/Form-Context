@@ -8,8 +8,9 @@ const Reducer = (state: any, action: any) => {
     case "REMOVE":
       return {
         ...state,
-        forms: state.forms.filter((forms) => forms.id !== action.payload),
+        forms: state.forms.filter((form) => form.id !== action.payload),
       };
+
     default:
       return state;
   }

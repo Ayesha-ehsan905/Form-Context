@@ -2,15 +2,11 @@ import { useContext, useRef, useState } from "react";
 import { FormContext } from "../context/FormContext";
 
 const Search = () => {
-  const { searchdetails } = useContext(FormContext);
   //   const inputref = useRef<HTMLInputElement>();
   const [name, setname] = useState<string>("");
 
   const handleFilter = (e) => {
     setname(e.target.value);
-    if (e.target.value != "") {
-      searchdetails(name);
-    }
   };
   return (
     <>

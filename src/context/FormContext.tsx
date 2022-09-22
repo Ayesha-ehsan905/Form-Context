@@ -5,11 +5,11 @@ import { IForm, IFormContext } from "../components/IForm";
 const initialStates: IFormContext = {
   addDetail(form) {},
   deletedetails(id) {},
-  forms: [{ name: "Ayesha", grade: "B+", id: 46013 }],
+  forms: [],
 };
 
 const reduceIntialState = {
-  forms: [{ name: "Ayesha", grade: "B+", id: 46013 }],
+  forms: [],
 };
 const FormContext = createContext<IFormContext>(initialStates);
 

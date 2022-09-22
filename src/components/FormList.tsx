@@ -8,20 +8,25 @@ const FormList = () => {
   const [search, setsearch] = useState("");
   const [data, setdata] = useState(forms);
 
+  //set the state if the input has a value
   const handleFilter = (e) => {
     setsearch(e.target.value);
-    const x = filterdata();
-    setdata(x);
+    filterList();
   };
-
+  //search from the value in the form
   const filterdata = () => {
     return forms.filter((item) =>
       item.name.toLowerCase().includes(search.toLowerCase())
     );
   };
+  const filterList = () => {
+    const x = filterdata();
+    setdata(x);
+  };
   useEffect(() => {
     setdata(forms);
-  }, [forms]);
+    filterList();
+  }, [forms, search]);
 
   return (
     <>
@@ -39,10 +44,9 @@ const FormList = () => {
           <span className="list-heading">ID</span>
           <span className="list-heading">Name</span>
           <span className="list-heading">Grade</span>
+          <span className="list-heading">Image</span>
           <span className="list-heading">Action</span>
         </div>
-
-        {/* {searchActive ? <span>Hellow</span> : <span>faild</span>} */}
         <div className="list-content">
           {data.map((form) => (
             <Detail key={form.id} form={form} />
@@ -54,10 +58,3 @@ const FormList = () => {
 };
 
 export default FormList;
-
-{
-  /* <h2>List</h2>
-{forms.map((form) => (
-  <Detail key={form.id} form={form} />
-))} */
-}

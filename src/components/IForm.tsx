@@ -2,7 +2,7 @@ export interface IForm {
   name: string;
   grade: string;
   id: number;
-  //   image: string;
+  image: File;
 }
 
 export interface IFormContext {

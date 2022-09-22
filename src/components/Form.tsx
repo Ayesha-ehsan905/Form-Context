@@ -20,7 +20,7 @@ const Form = () => {
 
   return (
     <div className="main_container">
-      <div className="container">
+      <div className="container box">
         <div className="header">Enter Your Details</div>
         <form onSubmit={onSubmit}>
           <div className="field input-field">
@@ -48,6 +48,20 @@ const Form = () => {
         </form>
       </div>
       <div className="container">
+        <div
+          className="header"
+          style={{ background: "none", color: "rgb(63, 0, 77)" }}
+        >
+          List Entries
+        </div>
+
+        {/* <div>
+          <input
+            className="input-grey-rounded"
+            type="text"
+            placeholder="Search"
+          />
+        </div> */}
         <FormList />
       </div>
     </div>

@@ -1,5 +1,4 @@
 import { useContext, useRef, useState } from "react";
-import { FormContext } from "../context/FormContext";
 
 const Search = () => {
   //   const inputref = useRef<HTMLInputElement>();

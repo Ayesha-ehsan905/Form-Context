@@ -11,7 +11,7 @@ const FormList = () => {
   //set the state if the input has a value
   const handleFilter = (e) => {
     setsearch(e.target.value);
-    filterList();
+    // filterList();
   };
   //search from the value in the form
   const filterdata = () => {

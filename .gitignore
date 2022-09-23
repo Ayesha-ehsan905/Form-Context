@@ -11,7 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
-/Search.tsx
+/src/components/Search.tsx
 
 # Editor directories and files
 .vscode/*
